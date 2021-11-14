@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+aside.flags {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: flex;
+}
+
+.flags a {
+    text-decoration: none;
+    padding: 0;
+}
+.flags a:first-child {
+    margin-right: 18px;
+}
+
+.flags img {
+    width: calc(40px + 1vw);
+    height: calc(40px + 1vw);
+    cursor: pointer;
+}
+
+section.bmi {
+    width: max(25%, 370px);
+}
+
+.bmi__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+:is(input, button) { 
+    padding: 4px 0 4px 5px;
+    font-size: 13.5px;
+    border-radius: 4px;
+    border: 2px solid black;
+    outline: none;
+    max-width: 134px;
+}
+
+input:focus {
+    border-color: #115fb8;
+    background-color: #f8f4f4;
+}
+
+button {
+    background-color: #5f7da0;
+    color: #ece8e8;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:hover { color: #e0a80e; }
+button:focus { border: 2px solid #e0a80e; }
+
+.bmi__table {
+    margin: 12px 0;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.bmi__table i {
+    margin: 7px 9px 0 7px;
+}
+.bmi__table i:last-child {
+    margin-bottom: 7px;
+}
+
+#show-bmi {
+    font-size: 18px;
+    text-align: center;
+    background-color: #005c80;
+    color: #f8f4f4;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+@media(max-width: 420px) {
+    section.bmi {
+        width: max(50%, 340px);
+    }
+
+    :is(input, button) { 
+        max-width: 122px;
+    }
+
+    .bmi__table {
+        font-size: 14px;
+    }
+
+    #show-bmi {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 375px) {
+    section.bmi {
+        width: max(50%, 310px);
+    }
+    
+    :is(input, button) { 
+        max-width: 113px;
+        font-size: 12px;
+    }    
+}
+
+@media(max-width: 320px) {
+    section.bmi {
+        width: max(50%, 280px);
+    }
+
+    :is(input, button) { 
+        max-width: 100px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
+    <link rel="stylesheet" href="bmi-calculator.css">
+<body>
+    <aside class="flags">
+        <a href="port.html">
+            <img src="img/brazil-flag.png" alt="Brazil Flag">
+        </a>
+        <a href="index.html">
+            <img src="img/england-flag.png" alt="USA Flag">
+        </a>
+    </aside>
+
+    <section class="bmi eng-lang">
+        <div class="bmi__top">
+            <input type="text" id="height" placeholder="height (inches)">
+            <input type="text" id="weight" placeholder="weight (pounds)">
+            <button type="button" id="btn-calc">Calculate</button>
+        </div>
+
+        <div class="bmi__table">
+            <p><i class="fas fa-weight"></i>Less than 18,5 - Under weight</p>
+            <p><i class="fas fa-weight"></i>Between 18,5 and 24,99 - Normal Weight</p>
+            <p><i class="fas fa-weight"></i>Between 25 and 29,99 - Overweight</p>
+            <p><i class="fas fa-weight"></i>Between 30 and 34,99 - Class 1 Obesity</p>
+            <p><i class="fas fa-weight"></i>Between 35 and 39,99 - Class 2 Obesity</p>
+            <p><i class="fas fa-weight"></i>From 40 or more - Morbid Obesity</p>
+        </div>
+
+        <h2 id="show-bmi">BMI result</h2>
+    </section>    
+
+    <script src="bmi-calculator-both.js"></script>
+</body>
+</html>

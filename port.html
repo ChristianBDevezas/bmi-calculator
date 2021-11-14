@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
     <link rel="stylesheet" href="bmi-calculator.css">
 <body>
-    <aside class="flags">
+    <header class="flags">
         <a href="index.html">
-            <img src="img/england-flag.png" alt="USA Flag">
+            <img src="img/england-flag.png" alt="England Flag">
         </a>
+
         <a href="port.html">
             <img src="img/brazil-flag.png" alt="Brazil Flag">
         </a>
-    </aside>
+    </header>
 
     <section class="bmi port-lang">
         <div class="bmi__top">
-            <input type="text" id="height" placeholder="altura (cm)">
-            <input type="text" id="weight" placeholder="peso (kg)">
+            <div class="bmi__input">
+                <label for="height">Altura (centímetros)</label>
+                <input type="text" id="height" placeholder="altura (cm)">
+            </div>
+
+            <div class="bmi__input">
+                <label for="weight">Peso (kilogramas)</label>
+                <input type="text" id="weight" placeholder="peso (kg)">
+            </div>
+            
             <button type="button" id="btn-calc">Calcular</button>
         </div>
 

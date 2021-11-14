@@ -12,10 +12,11 @@ body {
     position: relative;
 }
 
-aside.flags {
+header.flags {
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 25px;
+    left: 50%;
+    transform: translatex(-50%);
     display: flex;
 }
 
@@ -40,6 +41,19 @@ section.bmi {
 .bmi__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bmi__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bmi__input label {
+    margin-bottom: 2.5px;
+    font-size: 14px;
 }
 
 :is(input, button) { 
@@ -48,7 +62,7 @@ section.bmi {
     border-radius: 4px;
     border: 2px solid black;
     outline: none;
-    max-width: 134px;
+    max-width: 137px;
 }
 
 input:focus {
@@ -59,9 +73,10 @@ input:focus {
 button {
     background-color: #5f7da0;
     color: #ece8e8;
-    padding-right: 5px;
+    padding: 4.5px 7px;
     cursor: pointer;
     transition: all .5s;
+    align-self: flex-end;
 }
 
 button:hover { color: #e0a80e; }
@@ -90,17 +105,22 @@ button:focus { border: 2px solid #e0a80e; }
     border-radius: 5px;
 }
 
+/* Media Queries */
 @media(max-width: 420px) {
     section.bmi {
         width: max(50%, 340px);
     }
 
-    :is(input, button) { 
-        max-width: 122px;
+    .bmi__input label {
+        font-size: 12.4px;
     }
 
     .bmi__table {
         font-size: 14px;
+    }
+
+    :is(input, button) { 
+        max-width: 122px;
     }
 
     #show-bmi {
@@ -112,6 +132,10 @@ button:focus { border: 2px solid #e0a80e; }
     section.bmi {
         width: max(50%, 310px);
     }
+
+    .bmi__input label {
+        font-size: 11.5px;
+    }
     
     :is(input, button) { 
         max-width: 113px;
@@ -122,6 +146,10 @@ button:focus { border: 2px solid #e0a80e; }
 @media(max-width: 320px) {
     section.bmi {
         width: max(50%, 280px);
+    }
+
+    .bmi__input label {
+        font-size: 10.5px;
     }
 
     :is(input, button) { 
